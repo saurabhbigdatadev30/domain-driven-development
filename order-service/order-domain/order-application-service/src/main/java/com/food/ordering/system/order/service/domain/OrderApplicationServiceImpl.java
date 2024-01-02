@@ -26,7 +26,7 @@ class OrderApplicationServiceImpl implements OrderApplicationService
     @Override
     public CreateOrderResponse createOrder(CreateOrderCommand createOrderCommand)
     {
-         log.info("Inside the createOrder");
+         log.info("Inside the createOrder of TEST BRANCH");
         return orderCreateCommandHandler.createOrder(createOrderCommand);
     }
 
@@ -34,6 +34,14 @@ class OrderApplicationServiceImpl implements OrderApplicationService
     public TrackOrderResponse trackOrder(TrackOrderQuery trackOrderQuery) {
         return orderTrackCommandHandler.trackOrder(trackOrderQuery);
     }
+    public void testMethodA()
+    {
+        log.info("testMethodA() in the testBranch1 only");
+    }
 
+    public void testMethodB()
+    {
+        log.info("testMethodB()  in the testBranch1 only");
+    }
 
 }
